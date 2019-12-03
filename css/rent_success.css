@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+}
+
+.box3 {
+	grid-area: box3;
+	text-align: center;
+}
+
+.box3 h2 {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box4 {
+	grid-area: box4;
+	text-align: center;
+}
+
+.box4 h2 {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box5 {
+	grid-area: box5;
+	text-align: center;
+	color: white;
+	background-color: silver;
+}
+
+.box6 {
+	grid-area: box6;
+	text-align: center;
+}
+
+.box7 {
+	grid-area: box7;
+}
+
+.box8 {
+	grid-area: box8;
+}
+
+.column-content {
+	position: relative;
+	height: 61px;
+	vertical-align: middle;
+	line-height: 61px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		box2	box2	.		box4	box4	box4	box4	.	"
+	".		.		box2	box2	. 		box4	box4 	box4	box4	.	"
+	".		.		.		.		. 		.		.	 	.		.		.	"
+	".		.		box3	box3	. 		.		box6	box6	.	 	.	"
+	".		.		.		.		. 		.		box7 	box7	.		.	"
+	".		.		.		.		.		.		box8	box8	.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
+	background: #ededed;
+}
+
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(12, 61px);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		".		.		.		.	 	.		.	"
+		".		.		box2	box2	.		.	"
+		".		.		box2	box2 	.		.	"
+		".		box3	box3	box3 	box3	.	"
+		".		box4	box4	box4 	box4	.	"
+		".		.		.		.	 	.		.	"
+		".		.		box6	box6 	.		.	"
+		".		.		box7	box7 	.		.	"
+		".		.		box8	box8 	.		.	"
+		".		.		.		.	 	.		.	"
+		"box5	box5	box5	box5	box5	box5";
+	}
+}

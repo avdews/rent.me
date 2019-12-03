@@ -9,6 +9,7 @@
 
 .box3 {
 	grid-area: box3;
+	text-align: center;
 	background-color: orange;
 }
 
@@ -22,8 +23,20 @@
 	background-color: yellow;
 }
 
-.modal-close {
-	float: left;
+.box6 {
+	grid-area: box6;
+	text-align: center;
+	background-color: pink;
+}
+
+.box7 {
+	grid-area: box7;
+	background-color: purple;
+}
+
+.box8 {
+	grid-area: box8;
+	background-color: grey;
 }
 
 .grid {
@@ -32,18 +45,19 @@
 	grid-template-rows: repeat(12, 61px);
 	grid-template-areas:
 	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		box2	box2	box2 	.		box4	box4	box4 	box4	.	"
+	".		box2	box2	box2 	.		box4	box4	box4 	box4	.	"
+	".		box2	box2	box2 	.		box4	box4	box4 	box4	.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		box3	box3	box3 	.		box6	box6	box6 	box6	.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
 	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
 }
+
 
 @media (min-width: 768px) {
 	.navbar-brand {
@@ -65,16 +79,16 @@
 		grid-template-rows: repeat(12, 61px);
 		grid-template-areas:
 		"box1	box1	box1	box1	box1	box1"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
-		"box3	box3	box3	box3 	box3	box3"
+		".		.		.		.	 	.		.	"
+		".		.		.		.	 	.		.	"
+		".		.		box2	box2 	.		.	"
+		".		.		box2	box2 	.		.	"
+		".		.		box3	box3 	.		.	"
+		".		box4	box4	box4 	box4	.	"
+		".		.		.		.	 	.		.	"
+		".		.		box6	box6 	.		.	"
+		".		.		.		.	 	.		.	"
+		".		.		.		.	 	.		.	"
 		"box5	box5	box5	box5	box5	box5";
 	}
 }

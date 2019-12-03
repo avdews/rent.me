@@ -1,0 +1,110 @@
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+	background-color: green;
+}
+
+.box2a {
+	grid-area: box2a;
+	background-color: grey;
+}
+
+.box3 {
+	grid-area: box3;
+	background-color: orange;
+}
+
+.box3a {
+	grid-area: box3a;
+	background-color: grey;
+}
+
+.box4 {
+	grid-area: box4;
+	background-color: red;
+}
+
+.box4a {
+	grid-area: box4a;
+	background-color: grey;
+}
+
+.box5 {
+	grid-area: box5;
+	background-color: yellow;
+}
+
+.box6 {
+	grid-area: box6;
+	background-color: lime;
+}
+
+.box6a {
+	grid-area: box6a;
+	background-color: grey;
+}
+
+.box7 {
+	grid-area: box7;
+	background-color: olive;
+}
+
+.modal-close {
+	float: left;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		.		box2a	box2 	box2	.		.		.		.		.	"
+	".		.		.		box2 	box2	.		.		.		.		.	"
+	".		.		.		.		.		box3	box3	box3a 	.		.	"
+	".		.		.		.		.		box3	box3	.	 	.		.	"
+	".		.		box4a	box4 	box4	.		.		.		.		.	"
+	".		.		.		box4 	box4	.		.		.		.		.	"
+	".		.		.		.		.		box6	box6	box6a 	.		.	"
+	".		.		.		.		.		box6	box6	.	 	.		.	"
+	".		.		box7	box7 	box7	box7	box7	box7 	.		.	"
+	".		.		box7	box7 	box7	box7	box7	box7 	.		.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(12, 61px);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		"box2a	box2	box2	.		.		.	"
+		".		box2	box2	.		.		.	"
+		".		.		.		box3	box3	box3a"
+		".		.		.		box3	box3	.	"
+		"box4a	box4	box4	.		.		.	"
+		".		box4	box4	.		.		.	"
+		".		.		.		box6	box6	box6a"
+		".		.		.		box6	box6 	.	"
+		".		box7	box7	box7	box7	.	"
+		".		box7	box7	box7	box7	.	"
+		"box5	box5	box5	box5	box5	box5";
+	}
+}
