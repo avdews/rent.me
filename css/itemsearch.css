@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+
+div {
+	font-family: 'Nanum Gothic', sans-serif;
+	color: #40798C;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+	background-color: #ffffff;
+}
+
+.box3 {
+	grid-area: box3;
+	background-color: #ffffff;
+}
+
+.photo {
+	width: 40%;
+}
+
+img {
+	width: 100%;
+}
+
+#search p {
+	margin-bottom: 5%;
+}
+
+
+.description {
+	width: 60%;
+	text-align: center;
+}
+
+.description h4 {
+	margin-top: 7%;
+}
+
+p {
+	margin-bottom: 0%;
+}
+
+.d-flex {
+	padding: 1%;
+	margin: 1%
+	border: 3px #40798C solid;
+}
+
+.form-location input[type=text], select {
+	border: 2px solid #40798C;
+	width: 75%;
+}
+
+input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  }
+
+#search {
+	padding-top: 5%;
+	text-align: center;
+	padding-bottom: 7%;
+}
+
+form {
+	padding-bottom: 3%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(10, auto);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1"
+	"box2	box2	box2	box2	box2	box2"
+	"box2	box2	box2	box2 	box2	box2"
+	"box2	box2	box2	box2 	box2	box2"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box3	box3	box3	box3	box3	box3";
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}

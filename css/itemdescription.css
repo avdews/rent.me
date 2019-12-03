@@ -1,0 +1,127 @@
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+
+div {
+	font-family: 'Nanum Gothic', sans-serif;
+	color: #40798C;
+}
+
+p {
+	margin-bottom:5px;
+	margin-top: 2%;
+}
+
+img {
+	max-width: 100%;
+}
+
+.btn {
+	background-color: #40798C;
+	border: none;
+}
+
+.userimage {
+	display: inline-block;
+	width: 30%;
+}
+
+.description {
+	margin-bottom: 3%;
+}
+
+.rating {
+	display: inline-block;
+	width: 70%;
+	font-size: 12px;
+	margin-left: 3%;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.box3 {
+	grid-area: box3;
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 4%;
+	padding-bottom: 4%;
+
+}
+
+.box4 {
+	grid-area: box4;
+	background-color: #ffffff;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 4%;
+}
+
+.box5 {
+	grid-area: box5;
+	background-color: #ffffff;
+	padding-left: 10%;
+	padding-right: 10%;
+	display: inline;
+}
+
+.box6 {
+	grid-area: box6;
+}
+
+.ui-widget-header {
+	background: #40798C;
+	border: #40798C;
+	font-color: #ffffff;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	color: #40798C;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	border: 1px solid #40798C;
+	color: #40798C;
+}
+
+.date {
+	margin-top: 2%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(10, auto);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1"
+	"box3	box3	box3	box3	box3	box3"
+	"box3	box3	box3	box3 	box3	box3"
+	"box2	box2	box2	box2 	box2	box2"
+	"box2	box2	box2	box2 	box2	box2"
+	"box6	box6	box6	box6 	box6	box6"
+	"box4	box4	box4	box4 	box4	box4"
+	"box4	box4	box4	box4 	box4	box4"
+	"box4	box4	box4	box4 	box4	box4"
+	"box5	box5	box5	box5 	box5	box5"
+	"box5	box5	box5	box5	box5	box5";
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
