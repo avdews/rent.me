@@ -93,21 +93,27 @@ input[type=text] {
 	height: 100%;
 }
 
+.modal-close {
+	float: left;
+}
+
 .grid {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(10, 61px);
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
 	grid-template-areas:
-	"box1	box1	box1	box1	box1	box1"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box2	box3	box3	box3 	box3	box4"
-	"box5	box5	box5	box5	box5	box5";
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
 }
 
 @media (min-width: 768px) {

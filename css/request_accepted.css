@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+}
+
+.box3 {
+	grid-area: box3;
+	text-align: center;
+}
+
+.box4 {
+	grid-area: box4;
+	height: 61px;
+}
+
+.box5 {
+	grid-area: box5;
+	text-align: center;
+	background-color: silver;
+	color: white;
+}
+
+.box6 {
+	grid-area: box6;
+	height: 61px;
+}
+
+.box7 {
+	grid-area: box7;
+	height: 61px;
+}
+
+.box8 {
+	grid-area: box8;
+	text-align: center;
+}
+
+.box9 {
+	grid-area: box9;
+}
+
+.box10 {
+	grid-area: box10;
+	text-align: center;
+}
+
+.column-content {
+	position: relative;
+	height: 61px;
+	vertical-align: middle;
+	line-height: 61px;
+}
+
+.column-content p, h6 {
+	display: inline-block;
+}
+
+.align-right {
+	float: right;
+}
+
+.align-left {
+	float: left;
+}
+
+.modal-close {
+	float: left;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		box2	box2	box2	.		.		box10	box10	box10	.	"
+	".		box2	box2	box2	.		.		box4	box4	box4	.	"
+	".		.		.		.		. 		.		box6	box6 	box6	.	"
+	".		box3	box3	box3	. 		.		box7	box7 	box7	.	"
+	".		.		.		.		. 		.		.		.		.	 	.	"
+	".		.		.		.		box8 	box8	.		.		.		.	"
+	".		.		.		.		box9	box9	.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		.		.		.		.		.		.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
+	background: #ededed;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(12, 61px);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		".		.		.		.		.		.	"
+		".		box2	box3	box3 	box3	.	"
+		".		.		box3	box3 	box3	.	"
+		".		box10	box10	box10	box10	.	"
+		".		box4	box4	box4 	box4	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box7	box7	box7 	box7	.	"
+		".		.		.		.		.		.	"
+		".		.		box8	box8 	.		.	"
+		".		.		box9	box9 	.		.	"
+		"box5	box5	box5	box5	box5	box5";
+	}
+}

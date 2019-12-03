@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+}
+
+.box2 img {
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box3 {
+	grid-area: box3;
+}
+
+.box3 h3 {
+	text-align: center;
+}
+
+.box4 {
+	grid-area: box4;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.box4 fa-star {
+	display: inline-block;
+	color: #70a9A1;
+}
+
+.box5 {
+	grid-area: box5;
+	background-color: silver;
+	text-align: center;
+	color: white;
+}
+
+.box6 {
+	grid-area: box6;
+	text-align: center;
+}
+
+.box7 {
+	grid-area: box7;
+	text-align: center;
+}
+
+.box8 {
+	grid-area: box8;
+	text-align: center;
+}
+
+.box9 {
+	grid-area: box9;
+	text-align: center;
+}
+
+.box10 {
+	grid-area: box10;
+	text-align: center;
+}
+
+.box6 .box7 .box8 .box9 .box10 h5 {
+	text-align: center;
+}
+
+.carousel img {
+	max-width: 90px;
+	max-height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-control.right { 
+	opacity:1 !important;color: #70a9A1;
+}
+
+.carousel-control.left {
+	opacity:1 !important;color: #70a9A1;
+}
+
+.centering {
+	position: relative;
+	height: 61px;
+	vertical-align: middle;
+	line-height: 61px;
+}
+
+.align-right {
+	float: right;
+
+}
+
+.align-left {
+	float: left;
+}
+
+.modal-close {
+	float: left;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		.		.		.	 	.		box6	box6	box6 	box6	.	"
+	".		.		.		.		.		box6	box6	box6 	box6	.	"
+	".		box2	box2	box2 	.		box7	box7	box7 	box7	.	"
+	".		box2	box2	box2 	.		box7	box7	box7 	box7	.	"
+	".		box2	box2	box2 	.		box8	box8	box8 	box8	.	"
+	".		box3	box3	box3 	.		box8	box8	box8 	box8	.	"
+	".		box4	box4	box4 	.		box9	box9	box9 	box9	.	"
+	".		.		.		.	 	.		box9	box9	box9 	box9	.	"
+	".		.		.		.	 	.		box10	box10	box10 	box10	.	"
+	".		.		.		.	 	.		box10	box10	box10 	box10	.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
+	background: #ededed;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(12, 61px);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		".		box2	box3	box3 	box3	.	"
+		".		.		box4	box4 	box4	.	"
+		"box6	box6	box6	box7 	box7	box7"
+		"box6	box6	box6	box7 	box7	box7"
+		"box6	box6	box6	box7 	box7	box7"
+		"box8	box8	box8	box9 	box9	box9"
+		"box8	box8	box8	box9 	box9	box9"
+		"box8	box8	box8	box9 	box9	box9"
+		"box10	box10	box10	box10	box10	box10"
+		"box10	box10	box10	box10	box10	box10"
+		"box5	box5	box5	box5	box5	box5";
+	}
+}

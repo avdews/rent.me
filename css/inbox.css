@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.box1 {
+	grid-area: box1;
+}
+
+.box2 {
+	grid-area: box2;
+	background-color: green;
+}
+
+.box3 {
+	grid-area: box3;
+}
+
+.box4 {
+	grid-area: box4;
+}
+
+.box5 {
+	grid-area: box5;
+	background-color: silver;
+	color: white;
+	text-align: center;
+}
+
+.box6 {
+	grid-area: box6;
+/*	background-color: lightblue;*/
+}
+
+.box7 {
+	grid-area: box7;
+	/*background-color: purple;*/
+}
+
+.box8 {
+	grid-area: box8;
+	/*background-color: lime;*/
+}
+
+.box9 {
+	grid-area: box9;
+	/*background-color: navy;*/
+}
+
+.box10 {
+	grid-area: box10;
+	/*background-color: olive;*/
+}
+
+.box11 {
+	grid-area: box11;
+	/*background-color: silver;*/
+}
+
+.box12 {
+	grid-area: box12;
+	/*background-color: fuchsia;*/
+}
+
+.centering {
+	position: relative;
+	height: 61px;
+	vertical-align: middle;
+	line-height: 61px;
+}
+
+.panel-body p {
+	vertical-align: middle;
+}
+
+.modal-close {
+	float: left;
+}
+
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(12, 61px);
+	grid-template-areas:
+	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
+	".		.		.		.	 	.		.		.		.	 	.		.	"
+	".		.		box3	box4	.		.		.		.	 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box7	box7 	box7	box7	box7	box7 	.		.	"
+	".		.		box8	box8 	box8	box8	box8	box8 	.		.	"
+	".		.		box9	box9 	box9	box9	box9	box9 	.		.	"
+	".		.		box10	box10 	box10	box10	box10	box10 	.		.	"
+	".		.		box11	box11 	box11	box11	box11	box11 	.		.	"
+	".		.		box12	box12 	box12	box12	box12	box12 	.		.	"
+	".		.		.		.	 	.		.		.		.	 	.		.	"
+	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
+	background: #ededed;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+    	position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+
+	.login-button {
+		position: absolute;
+		right: 1%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(12, 61px);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		".		.		.		.		.		.	"
+		".		box3	box4	.	 	.		.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box7	box7	box7 	box7	.	"
+		".		box8	box8	box8 	box8	.	"
+		".		box9	box9	box9 	box9	.	"
+		".		box10	box10	box10 	box10	.	"
+		".		box11	box11	box11 	box11	.	"
+		".		box12	box12	box12 	box12	.	"
+		".		.		.		.		.		.	"
+		"box5	box5	box5	box5	box5	box5";
+	}
+}
