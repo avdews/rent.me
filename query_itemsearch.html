@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>rent.me</title>
-	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/query_itemsearch.css">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -50,32 +50,25 @@
 		<div class="box3">
 
 			<div id="search">
-      <h3> Welcome!</h3>
+      <h3> Looks like you're in San Francisco.</h3>
        <div class="illustration" class="justify-content-center">
-          <img src="img/RollerSkatingDoodle.png" alt="Roller Skating Doodle">
+          <img src="img/GroovySittingDoodle.png" alt="Groovy Sitting Doodle">
         </div>
 
-				<form class="form justify-content-center" id="searchreal">
-				<input type="text" id="searchbox" placeholder="Where are you headed?" class="text-center">
-				<div class="form-check">
-    				<label class="form-check-label">
-      					<input class="form-check-input" type="checkbox"> Use My Location
-   					 </label>
-			</div>
+				<form class="form justify-content-center" id="newsearch">
+				<input type="text" id="thisisthesearch" placeholder="What would you like to rent?" class="text-center">
 				</form>
 			</div>
 			<div id="map">
 			<h4 class="text-center">Available near me</h4>
-      <div class="map-iframe text-center">
+      <div class="map-iframe">
 			   <iframe iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/u/0/embed?mid=16ShKdOk-mzZmMDAa4PYtkeM5EplsOTj7"></iframe>
       </div>
 		</div>
-		<div class="box4">      
-        </div>
-		<div class="box5">
-        </div>      
-    </div>
-
+	</div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+	</div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" role="dialog">
@@ -399,40 +392,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<script> 
-    $(document).ready(function() {
-        $("#searchreal").submit(function(){
-    window.location.assign("query_itemsearch.html")
+   <script>
+     $(document).ready(function() {
+        $("#newsearch").submit(function(){
+    window.location.assign("itemdescription.html")
     event.preventDefault();
   });
-});
-        
+});    
+
+
 /*
-        $( "#searchbox" ).submit(function( event ) {
+        $( "#search" ).submit(function( event ) {
           // if ( $( "#search" ).first().val() === "soccer ball" ) {
-            window.location.assign = "query_itemsearch.html";
+            window.location.href = "itemsearch.html";
             return;
           // }
          
           // $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
           event.preventDefault();
         });
-
-        /*$( ".form-location" ).submit(function() {
-            window.location.href = "query_itemsearch.html";
-
-        }*/
-
-        $("#postItemLink").click(function() {
-            $("#postItemModal").modal();
+*/
+        $(document).ready(function() {
+            $("#postItemLink").click(function() {
+                $("#postItemModal").modal();
+            });
         });
 
-        $("#loginButton").click(function() {
-            $("#loginModal").modal();
+        $(document).ready(function() {
+            $("#paymentInfoLink").click(function() {
+                $("#paymentInfoModal").modal();
+            });
         });
 
-        $("#paymentInfoLink").click(function() {
-            $("#paymentInfoModal").modal();
+
+
+        $(document).ready(function() {
+            $("#loginButton").click(function() {
+                $("#loginModal").modal();
+            });
         });
     </script>
 
