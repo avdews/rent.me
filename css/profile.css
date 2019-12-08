@@ -13,6 +13,7 @@
 }
 
 .box2 img {
+	max-width: 170px;
 	border-radius: 50%;
 	display: block;
 	margin-left: auto;
@@ -82,12 +83,9 @@
 	margin-right: auto;
 }
 
-.carousel-control.right { 
-	opacity:1 !important;color: #70a9A1;
-}
-
-.carousel-control.left {
-	opacity:1 !important;color: #70a9A1;
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
 
 .centering {
@@ -161,5 +159,9 @@
 		"box10	box10	box10	box10	box10	box10"
 		"box10	box10	box10	box10	box10	box10"
 		"box5	box5	box5	box5	box5	box5";
+	}
+
+	.box2 img {
+		max-width: 100px;
 	}
 }

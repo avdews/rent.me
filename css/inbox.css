@@ -4,6 +4,26 @@
 	font-family: 'Nanum Gothic', sans-serif;
 }
 
+ul a {
+	color: black;
+	text-decoration: none;
+}
+
+ul a:link {
+	color: black;
+	text-decoration: none;
+}
+
+ul a:hover {
+	color: #40798C;
+	text-decoration: none;
+}
+
+ul a:active {
+	color: black;
+	text-decoration: none;
+}
+
 .box1 {
 	grid-area: box1;
 }
@@ -21,6 +41,10 @@
 	grid-area: box4;
 }
 
+.box4 button {
+	text-align: center;
+}
+
 .box5 {
 	grid-area: box5;
 	background-color: silver;
@@ -30,44 +54,31 @@
 
 .box6 {
 	grid-area: box6;
-/*	background-color: lightblue;*/
+	display: inline-block;
 }
 
 .box7 {
 	grid-area: box7;
-	/*background-color: purple;*/
+	text-align: center;
+	color: #40798C;
 }
 
-.box8 {
-	grid-area: box8;
-	/*background-color: lime;*/
-}
-
-.box9 {
-	grid-area: box9;
-	/*background-color: navy;*/
-}
-
-.box10 {
-	grid-area: box10;
-	/*background-color: olive;*/
-}
-
-.box11 {
-	grid-area: box11;
-	/*background-color: silver;*/
-}
-
-.box12 {
-	grid-area: box12;
-	/*background-color: fuchsia;*/
+.box7 h2 {
+	margin-top: -5px;
 }
 
 .centering {
 	position: relative;
-	height: 61px;
 	vertical-align: middle;
+	height: 61px;
 	line-height: 61px;
+}
+
+.message {
+	position: relative;
+	vertical-align: middle;
+	height: 20px;
+	line-height: 20px;
 }
 
 .panel-body p {
@@ -78,6 +89,26 @@
 	float: left;
 }
 
+.message p {
+	display: inline;
+}
+
+.message-time {
+	float: right;
+}
+
+.message-sender {
+	float: left;
+}
+
+#new-message-button {
+	background-color: #40798C;
+	border-color: #40798C;
+}
+
+#delete-button {
+	float: right;
+}
 
 .grid {
 	display: grid;
@@ -86,14 +117,14 @@
 	grid-template-areas:
 	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
 	".		.		.		.	 	.		.		.		.	 	.		.	"
-	".		.		box3	box4	.		.		.		.	 	.		.	"
+	".		.		box3	box3	box7	box7	box4	box4 	.		.	"
 	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
-	".		.		box7	box7 	box7	box7	box7	box7 	.		.	"
-	".		.		box8	box8 	box8	box8	box8	box8 	.		.	"
-	".		.		box9	box9 	box9	box9	box9	box9 	.		.	"
-	".		.		box10	box10 	box10	box10	box10	box10 	.		.	"
-	".		.		box11	box11 	box11	box11	box11	box11 	.		.	"
-	".		.		box12	box12 	box12	box12	box12	box12 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
+	".		.		box6	box6 	box6	box6	box6	box6 	.		.	"
 	".		.		.		.	 	.		.		.		.	 	.		.	"
 	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
 	background: #ededed;
@@ -112,6 +143,16 @@
 	}
 }
 
+@media (max-width: 800px) {
+	.message-time {
+		visibility: hidden;
+	}
+
+	.box6 p {
+		font-size: smaller;
+	}
+}
+
 @media (max-width: 767px) {
 	.grid {
 		display: grid;
@@ -119,16 +160,44 @@
 		grid-template-rows: repeat(12, 61px);
 		grid-template-areas:
 		"box1	box1	box1	box1	box1	box1"
-		".		.		.		.		.		.	"
-		".		box3	box4	.	 	.		.	"
+		".		.		box7	box7	.		.	"
+		".		box3	box3	box4 	box4	.	"
 		".		box6	box6	box6 	box6	.	"
-		".		box7	box7	box7 	box7	.	"
-		".		box8	box8	box8 	box8	.	"
-		".		box9	box9	box9 	box9	.	"
-		".		box10	box10	box10 	box10	.	"
-		".		box11	box11	box11 	box11	.	"
-		".		box12	box12	box12 	box12	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box6	box6	box6 	box6	.	"
+		".		box6	box6	box6 	box6	.	"
 		".		.		.		.		.		.	"
 		"box5	box5	box5	box5	box5	box5";
 	}
+
+	.btn {
+		font-size: 9px;
+	}
+
+	.box5 p {
+		font-size: smaller;
+	}
+
+	.box6 p {
+		font-size: 9px;
+	}
+
+	.message {
+		height: 10px;
+		line-height: 10px;
+	}
+
+	.message-time {
+		visibility: hidden;
+	}
+
+	a {
+		height: 45px;
+		padding: 5px;
+	}
 }
+
+@media (max-height: )
