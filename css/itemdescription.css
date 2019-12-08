@@ -20,7 +20,9 @@ img {
 	background-color: #40798C;
 	border: none;
 }
-
+.d-flex {
+	margin-top: 2%;
+}
 .userimage {
 	display: inline-block;
 	width: 30%;
