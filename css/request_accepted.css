@@ -53,6 +53,11 @@
 	text-align: center;
 }
 
+.box11 {
+	grid-area: box11;
+	text-align: center;
+}
+
 .column-content {
 	position: relative;
 	height: 61px;
@@ -90,7 +95,7 @@
 	".		.		.		.		. 		.		.		.		.	 	.	"
 	".		.		.		.		box8 	box8	.		.		.		.	"
 	".		.		.		.		box9	box9	.		.		.		.	"
-	".		.		.		.		.		.		.		.		.		.	"
+	".		.		.		.		box11	box11	.		.		.		.	"
 	".		.		.		.		.		.		.		.		.		.	"
 	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
 	background: #ededed;
@@ -123,9 +128,9 @@
 		".		box4	box4	box4 	box4	.	"
 		".		box6	box6	box6 	box6	.	"
 		".		box7	box7	box7 	box7	.	"
-		".		.		.		.		.		.	"
 		".		.		box8	box8 	.		.	"
 		".		.		box9	box9 	.		.	"
+		".		.		box11	box11	.		.	"
 		"box5	box5	box5	box5	box5	box5";
 	}
 }

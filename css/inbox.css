@@ -24,6 +24,10 @@ ul a:active {
 	text-decoration: none;
 }
 
+.navbar {
+	z-index: 1000;
+}
+
 .box1 {
 	grid-area: box1;
 }

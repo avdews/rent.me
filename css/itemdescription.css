@@ -1,8 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
-
-div {
+* {
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #40798C;
 }
@@ -78,6 +77,27 @@ img {
 	grid-area: box6;
 }
 
+.box6 h3 {
+	color: white;
+}
+
+.box7 {
+	grid-area: box7;
+	background-color: silver;
+	text-align: center;
+}
+
+.box7 p {
+	color: white;
+}
+
+.centering {
+	position: relative;
+	vertical-align: middle;
+	height: 70px;
+	line-height: 70px;
+}
+
 .ui-widget-header {
 	background: #40798C;
 	border: #40798C;
@@ -100,7 +120,7 @@ img {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(10, auto);
+	grid-template-rows: repeat(13, auto);
 	grid-template-areas:
 	"box1	box1	box1	box1	box1	box1"
 	"box3	box3	box3	box3	box3	box3"
@@ -112,7 +132,8 @@ img {
 	"box4	box4	box4	box4 	box4	box4"
 	"box4	box4	box4	box4 	box4	box4"
 	"box5	box5	box5	box5 	box5	box5"
-	"box5	box5	box5	box5	box5	box5";
+	"box5	box5	box5	box5	box5	box5"
+	"box7	box7	box7	box7	box7	box7";
 }
 
 @media (min-width: 768px) {
