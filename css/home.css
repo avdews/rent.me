@@ -1,8 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
-
-div {
+* {
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #40798C;
 }
@@ -16,6 +15,10 @@ div {
 	margin-top: 5%;
 }
 
+#rentmap {
+	height: 350px;
+	width: 425px;
+}
 
 p {
 	text-align: center;
@@ -38,11 +41,11 @@ p {
 
 input[type=text] {
   padding: 6px;
-  border: none;
+  /*border: none;*/
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  }
+}
 
 .box1 {
 	grid-area: box1;
@@ -66,29 +69,42 @@ input[type=text] {
 
 .box5 {
 	grid-area: box5;
+	background-color: silver;
+	color: white;
 }
 
+.box5 p {
+	color: white;
+}
 
 .modal-close {
 	float: left;
 }
 
+.centering {
+	position: relative;
+	vertical-align: middle;
+	height: 61px;
+	line-height: 61px;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: repeat(12, 61px);
+	grid-template-rows: repeat(13, 61px);
 	grid-template-areas:
 	"box1	box1	box1	box1	box1	box1	box1	box1	box1	box1"
 	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
 	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
 	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
-	".		box3	box3	box3 	box3	box3	box3	box3 	box3	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		box4	box4	box4 	box4	box4	box4	box4 	box4	.	"
+	".		.		.		.		.		.		.		.		.		.	"
 	"box5	box5	box5	box5	box5	box5	box5	box5	box5	box5";
 }
 
@@ -119,5 +135,11 @@ input[type=text] {
 
 	#map-iframe {
 		height: 200px;
+		max-width: 100px;
+	}
+
+	#rentmap {
+		height: 400px;
+		width: 300px;
 	}
 }

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
-
-div {
+* {
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #40798C;
 }
+
 
 .box1 {
 	grid-area: box1;
@@ -18,6 +18,16 @@ div {
 .box3 {
 	grid-area: box3;
 	background-color: #ffffff;
+}
+
+.box5 {
+	grid-area: box5;
+	background-color: silver;
+	text-align: center;
+}
+
+.box5 p {
+	color: white;
 }
 
 .photo {
@@ -57,13 +67,19 @@ p {
 	width: 75%;
 }
 
+.centering {
+	position: relative;
+	vertical-align: middle;
+	height: 61px;
+	line-height: 61px;
+}
+
 input[type=text] {
   padding: 6px;
-  border: none;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  }
+}
 
 #search {
 	text-align: center;
@@ -93,7 +109,7 @@ a:active {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(10, auto);
+	grid-template-rows: repeat(11, auto);
 	grid-template-areas:
 	"box1	box1	box1	box1	box1	box1"
 	"box2	box2	box2	box2	box2	box2"
@@ -105,7 +121,8 @@ a:active {
 	"box3	box3	box3	box3 	box3	box3"
 	"box3	box3	box3	box3 	box3	box3"
 	"box3	box3	box3	box3 	box3	box3"
-	"box3	box3	box3	box3	box3	box3";
+	"box3	box3	box3	box3	box3	box3"
+	"box5 	box5	box5	box5	box5	box5";
 }
 
 @media (min-width: 768px) {
@@ -118,5 +135,26 @@ a:active {
 	.login-button {
 		position: absolute;
 		right: 1%;
+	}
+}
+
+@media (min-width: 767px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(11, auto);
+		grid-template-areas:
+		"box1	box1	box1	box1	box1	box1"
+		"box2	box2	box2	box2	box2	box2"
+		"box2	box2	box2	box2 	box2	box2"
+		"box2	box2	box2	box2 	box2	box2"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3 	box3	box3"
+		"box3	box3	box3	box3	box3	box3"
+		"box5 	box5	box5	box5	box5	box5";
 	}
 }

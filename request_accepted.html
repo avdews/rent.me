@@ -68,10 +68,13 @@
             <h5>Ready to Rent?</h5>
         </div>
         <div class="box9 text-center align-center">
-            <button type="button" class="btn btn-success btn-block" id="rent-button">Rent</button>
+            <a class="btn btn-success btn-block" id="rentPaymentInfoLink" href="#">Rent</a>
         </div>
         <div class="box10 column-content">
             <p><b>Rental Summary</b></p>
+        </div>
+        <div class="box11 text-center align-center">
+            <a class="btn btn-primary btn-block" href="itemdescription.html">View Post</a>
         </div>
 		<div class="box5 column-content">
             <p>Copyright 2019 rent.me. All Rights Reserved.</p>      
@@ -167,6 +170,60 @@
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Rent Payment Modal -->
+    <div class="modal fade" id="rentPaymentInfoModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Payment Info</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form accept-charset="UTF-8" action="/" role="form">
+                        <div class="form-row">
+                            <div class="col-sm-12 form-group required">
+                                <label class="control-label" for="cardholder">Name on Card</label>
+                                <input type="text" class="form-control" id="cardholder" placeholder="First Last">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-12 form-group required">
+                                <label class="control-label" for="cardnumber">Card Number</label>
+                                <input autocomplete="off" type="text" class="form-control card-number no-border" id="cardnumber" size="20">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-4 mr-auto form-group cvc required">
+                                <label class="control-label" for="CVV">CVV</label>
+                                <input autocomplete="off" type="text" class="form-control card-cvc" id="CVV" placeholder="XXX" size="3">
+                            </div>
+                            <div class="col-4 ml-auto float-right form-group expiration required">
+                                <label class="control-label" for="ExpMon">Exp Month</label>
+                                <input type="text" class="form-control" id="ExpMon" placeholder="MM" size=2>
+                            </div>
+                            <div class="col-4 ml-auto float-right form-group expiration required">
+                                <label class="control-label" for="ExpYear">Year</label>
+                                <input type="text" class="form-control" placeholder="YYYY" id="ExpYear" size=4>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a href="rent_success.html" class="btn btn-success" data-dismiss="modal" id="paySubmit">Pay</a>
+                    <!-- <button type="button" class="btn btn-success" data-dismiss="modal">Pay</button> -->
                 </div>
             
             </div>
@@ -405,6 +462,10 @@
             $("#postItemLink").click(function() {
                 $("#postItemModal").modal();
             });
+
+            $("#paySubmit").click(function(){
+                window.location.href = "rent_success.html";
+            });
         });
     </script>
 
@@ -424,6 +485,20 @@
         });
     </script>
 
+    <script>
+        $(document).ready(function() {
+            $("#rentPaymentInfoLink").click(function() {
+                $("#rentPaymentInfoModal").modal();
+            });
+        });
+    </script>
+
+    <script>
+        jQuery(function($) {
+            $('#rentPaymentInfoModal').on('hidden.bs.modal', function (e) {
+                window.location.href = "http://www.google.com";
+            });
+    </script>
 
 </body>
 </html>

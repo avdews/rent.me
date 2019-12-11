@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Item Description</title>
+	<title>Soccer Ball | rent.me</title>
 	
 
     <!-- Required meta tags -->
@@ -30,7 +30,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand mx-auto" href="#">rent.me</a>
+                <a class="navbar-brand mx-auto" href="home.html">rent.me</a>
                 <ul class="navbar-nav float-md-right login-button">
                     <li class="nav-item">
                         <a class="nav-link" id="loginButton" href="#">Log In</a>
@@ -46,15 +46,15 @@
                             <a class="nav-link" href="#">Messages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="paymentInfo" href="#">Payment Info</a>
+                            <a class="nav-link" id="paymentInfoLink" href="#">Payment Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="postItem" href="#">Post an Item</a>
+                            <a class="nav-link" id="postItemLink" href="#">Post an Item</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </div>
+    </div>
 		<div class="box2">
 			<img src="img/soccerball.jpg" alt="Soccer Ball">
 		</div>
@@ -69,47 +69,42 @@
 			<div class="description">
 				<p><span class="font-weight-bold"> Item description: </span> My roommate bought this ball for intramural soccer practice, but then he moved back to Chicago! It's desafio brand, high quality, and you can borrow our pump to inflate if you need.</p>
 
-<!--- RENT BY DAY MODAL --->
+        <!--- RENT BY DAY MODAL --->
 
-<!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-  Open modal
-</button>
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content text-center">
 
-<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content text-center">
+                <!-- Modal Header -->
+                <div class="modal-header justify-content-center">
+                  <h4 class="modal-title text-center" >Request days to rent:</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
 
-      <!-- Modal Header -->
-      <div class="modal-header justify-content-center">
-        <h4 class="modal-title text-center" >Request days to rent:</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+                <!-- Modal body -->
+                 
+                <div class="modal-body" id="modal-body">
+                  <input type="text" class="form-control date" placeholder="When you need it">
+                  <input type="text" class="form-control date" placeholder="When you'll return it">
+                  <script> 
+                      $(".date").datepicker({
+                          changeMonth: true,
+                          changeYear: true,
+                          multidate: true,
+                          format: 'dd-mm-yyyy',
+                      });
+                  </script>
+                </div>
 
-      <!-- Modal body -->
-       
-      <div class="modal-body" id="modal-body">
-        <input type="text" class="form-control date" placeholder="When you need it">
-        <input type="text" class="form-control date" placeholder="When you'll return it">
-<script> 
-    $(".date").datepicker({
-        changeMonth: true,
-        changeYear: true,
-        multidate: true,
-        format: 'dd-mm-yyyy',
-    });
-</script>
-      </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <a href="rent_request_success.html" id="goToRentRequestButton" class="btn btn-warning text-white">Next</a>
+                </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-warning text-white">Next</button>
-      </div>
-
-    </div>
-  </div>
-</div>	
+              </div>
+            </div>
+          </div>	
 			</div>
 		</div>
 		<div class="box5">
@@ -141,11 +136,17 @@
 			</div>
 		</div>
 		<div class="box6">
-			<div class="jumbotron text-white" style="background-color:#40798C; margin-bottom: 5%;">
-				<h3 style="font-size:18px;">Request to Rent for $1 a day ></h3>
-			</div>
+			<a id="rentItemLink" href="#">
+        <div class="jumbotron text-white" style="background-color:#40798C; margin-bottom: 5%;">
+				  <h3 style="font-size:18px;">Request to Rent for $1 a day</h3>
+			 </div>
+      </a>
 		</div>
+    <div class="box7 centering">
+      <p>Copyright 2019 rent.me. All Rights Reserved.</p> 
+    </div>
 	</div>
+</div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" role="dialog">
@@ -181,6 +182,280 @@
           </div>
           
         </div>
+    </div>
+
+        <!-- Payment Modal -->
+    <div class="modal fade" id="paymentInfoModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Payment Info</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form accept-charset="UTF-8" action="/" role="form">
+                        <div class="form-row">
+                            <div class="col-sm-12 form-group required">
+                                <label class="control-label" for="cardholder">Name on Card</label>
+                                <input type="text" class="form-control" id="cardholder" placeholder="First Last">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-12 form-group required">
+                                <label class="control-label" for="cardnumber">Card Number</label>
+                                <input autocomplete="off" type="text" class="form-control card-number no-border" id="cardnumber" size="20">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-4 mr-auto form-group cvc required">
+                                <label class="control-label" for="CVV">CVV</label>
+                                <input autocomplete="off" type="text" class="form-control card-cvc" id="CVV" placeholder="XXX" size="3">
+                            </div>
+                            <div class="col-4 ml-auto float-right form-group expiration required">
+                                <label class="control-label" for="ExpMon">Exp Month</label>
+                                <input type="text" class="form-control" id="ExpMon" placeholder="MM" size=2>
+                            </div>
+                            <div class="col-4 ml-auto float-right form-group expiration required">
+                                <label class="control-label" for="ExpYear">Year</label>
+                                <input type="text" class="form-control" placeholder="YYYY" id="ExpYear" size=4>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal - Item Info -->
+    <div class="modal fade" id="postItemModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Post an Item</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-6 mr-auto">
+                                <label class="control-label" for="itemName">Item</label>
+                            </div>
+                            <div class="col-6 ml-auto">
+                                 <input type="text" class="form-control" placeholder="" id="itemName">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mr-auto">
+                                <label class="control-label" for="itemCondition">Condition</label>
+                            </div>
+                            <div class="col-6 ml-auto">
+                                <select class="form-control input-small" id="itemCondition">
+                                    <option>Excellent</option>
+                                    <option>Good</option>
+                                    <option>Fair</option>
+                                    <option>Poor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mr-auto">
+                                <label class="control-label" for="itemDeposit">Deposit</label>
+                            </div>
+                            <div class="col-6 ml-auto">
+                                <input type="text" class="form-control" id="itemDeposit" placeholder="$">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mr-auto">
+                                <label class="control-label" for="itemPrice">Per Day</label>
+                            </div>
+                            <div class="col-6 ml-auto">
+                                 <input type="text" class="form-control" id="itemPrice" placeholder="$">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postItemModal2" data-dismiss="modal">Next</button>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- Add Item Modal - Description -->
+    <div id="postItemModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Post an Item</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-8 mx-auto">
+                                <p>Add a short description of the item.</p>
+                                <p>Good descriptions get more rent requests!</p>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-8 mx-auto">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger mr-auto modal-close" data-toggle="modal" data-target="#postItemModal" data-dismiss="modal">Back</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postItemModal3" data-dismiss="modal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal - Location -->
+    <div id="postItemModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Post an Item</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>      
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="form-group col-12 mx-auto text-center">
+                                <label for="code">Where is the item located?</label>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="mx-auto">
+                                <input type="text" name="form-control" id="itemLocation" placeholder="San Francisco">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4 mx-auto">
+                                <a href="#">Use my location</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger mr-auto modal-close" data-toggle="modal" data-target="#postItemModal2" data-dismiss="modal">Back</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postItemModal4" data-dismiss="modal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal – Upload Image  -->
+    <div id="postItemModal4" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <button type="button" class="close float-left" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Post an Item</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-7 mx-auto">
+                                <p>Upload an image of your item.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12 mx-auto">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger mr-auto modal-close" data-toggle="modal" data-target="#postItemModal2" data-dismiss="modal">Back</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postItemSuccessModal" data-dismiss="modal">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal – Success  -->
+    <div id="postItemSuccessModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 mx-auto">
+                                <h2 class="modal-title">Success</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-4 mx-auto">
+                                <i class="fas fa-check fa-7x"></i>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-8 mx-auto text-center">
+                                <p>Your item has been posted!</p>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="" data-target="" data-dismiss="modal">View Post</button>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="" data-target="" data-dismiss="modal">My Profile</button>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#postItemModal" data-dismiss="modal">Post Another Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mr-auto modal-close" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div> 
 
     <!-- Optional JavaScript -->
@@ -191,10 +466,34 @@
 
     <script>
         $(document).ready(function(){
-        $("#loginButton").click(function(){
-        $("#loginModal").modal();
+          $("#loginButton").click(function(){
+              $("#loginModal").modal();
+          });
         });
-    });
+
+        $(document).ready(function() {
+          $("#postItemLink").click(function() {
+            $("#postItemModal").modal();
+          });
+        });
+
+        $(document).ready(function() {
+            $("#paymentInfoLink").click(function() {
+                $("#paymentInfoModal").modal();
+            });
+        });
+
+        $(document).ready(function() {
+          $("#rentItemLink").click(function() {
+              $("#myModal").modal();
+          });
+        });
+
+        $(document).ready(function() {
+          $("#goToRentRequestButton").click(function() {
+              $("#goToRentRequestButton").on('click', function() { window.location = 'rent_request_success.html'; })
+          });
+        });
     </script>
 
 </body>

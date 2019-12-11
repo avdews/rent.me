@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>rent.me</title>
+	<title>Search | rent.me</title>
 	<link rel="stylesheet" type="text/css" href="css/query_itemsearch.css">
 
     <!-- Required meta tags -->
@@ -34,7 +34,7 @@
                             <a class="nav-link" href="profile.html">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="inbox.hthml">Messages</a>
+                            <a class="nav-link" href="inbox.html">Messages</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="paymentInfoLink" href="#">Payment Info</a>
@@ -48,26 +48,28 @@
         </div>
 		<div class="box2"></div>
 		<div class="box3">
-
 			<div id="search">
-      <h3> Looks like you're in San Francisco.</h3>
-       <div class="illustration" class="justify-content-center">
-          <img src="img/GroovySittingDoodle.png" alt="Groovy Sitting Doodle">
-        </div>
+                <h3> Looks like you're in San Francisco.</h3>
+                <div class="illustration" class="justify-content-center">
+                    <img src="img/GroovySittingDoodle.png" alt="Groovy Sitting Doodle">
+                </div>
 
 				<form class="form justify-content-center" id="newsearch">
 				<input type="text" id="thisisthesearch" placeholder="What would you like to rent?" class="text-center">
 				</form>
 			</div>
-			<div id="map">
-			<h4 class="text-center">Available near me</h4>
-      <div class="map-iframe">
-			   <iframe iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/u/0/embed?mid=16ShKdOk-mzZmMDAa4PYtkeM5EplsOTj7"></iframe>
-      </div>
-		</div>
-	</div>
-		<div class="box4"></div>
-		<div class="box5"></div>
+        </div>
+		<div class="box4">
+            <div id="map">
+                <h4 class="text-center">Available near me</h4>
+                  <div class="map-iframe">
+                           <iframe iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/u/0/embed?mid=16ShKdOk-mzZmMDAa4PYtkeM5EplsOTj7"></iframe>
+                  </div>
+            </div>      
+        </div>
+		<div class="box5 centering">
+            <p>Copyright 2019 rent.me. All Rights Reserved.</p>      
+        </div>
 	</div>
 
     <!-- Login Modal -->
@@ -395,7 +397,7 @@
    <script>
      $(document).ready(function() {
         $("#newsearch").submit(function(){
-    window.location.assign("itemdescription.html")
+    window.location.assign("itemsearch.html")
     event.preventDefault();
   });
 });    

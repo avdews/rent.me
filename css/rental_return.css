@@ -8,24 +8,9 @@
 	grid-area: box1;
 }
 
-.navbar {
-	z-index: 1000;
-}
-
 .box2 {
 	grid-area: box2;
-}
 
-.box2 a {
-	color: white;
-}
-
-.box2 a:visited {
-	color: white;
-}
-
-.box2 a:hover {
-	text-decoration: none;
 }
 
 .box3 {
